@@ -1,6 +1,6 @@
 # Auth Log Threat Detector
 
-![CI](https://github.com/okrahgadiel-star/auth-log-threat-detector/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/okrahgadiel/auth-log-threat-detector/actions/workflows/ci.yml/badge.svg)
 
 A lightweight, SIEM-style detection engine for **identity attacks**. It ingests Microsoft Entra ID (Azure AD) sign-in logs and Linux `sshd` auth logs, normalizes them into one event schema, and runs sliding-window detection rules mapped to **MITRE ATT&CK**. Alerts print to the console and can be written as JSON Lines for SIEM or SOAR ingestion.
 
@@ -22,7 +22,7 @@ All thresholds live in a single `Config` dataclass so you can tune them for your
 Requires Python 3.9+. No dependencies.
 
 ```bash
-git clone https://github.com/okrahgadiel-star/auth-log-threat-detector.git
+git clone https://github.com/okrahgadiel/auth-log-threat-detector.git
 cd auth-log-threat-detector
 python -m detector sample_data/signins.jsonl sample_data/auth.log --json-out alerts.jsonl
 ```
